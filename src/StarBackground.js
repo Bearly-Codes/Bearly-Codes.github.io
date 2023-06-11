@@ -16,7 +16,7 @@ const StarBackground = () => {
         // Generate random stars
         const generateStars = () => {
             stars = [];
-            const numberOfStars = Math.floor(canvas.width * canvas.height * 0.0005);
+            const numberOfStars = Math.floor(canvas.width * canvas.height * 0.002);
 
             for (let i = 0; i < numberOfStars; i++) {
                 const x = Math.random() * canvas.width;

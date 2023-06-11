@@ -6,7 +6,7 @@ function App() {
   return (
       <div className="black_background">
         <StarBackground />
-          <h1>You gotta admit this is pretty cool</h1>
+          <h1>Starry Sky</h1>
       </div>
   );
 }

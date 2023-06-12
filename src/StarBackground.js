@@ -83,10 +83,12 @@ const StarBackground = () => {
     }, []);
 
     return (
-        <Container fluid className="p-0">
-            <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0 }} />
-            {<NamePage />}
-        </Container>
+        <div className="position-relative">
+            <div className="position-absolute top-0 left-0 w-100 h-100">
+                <canvas ref={canvasRef} className="w-100 h-100" />
+            </div>
+            <NamePage />
+        </div>
     );
 };
 

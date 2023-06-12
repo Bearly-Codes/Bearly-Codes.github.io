@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
+import TypeWriter from "react-typewriter";
+import NamePage from "./NamePage";
 
 const StarBackground = () => {
     const canvasRef = useRef(null);
@@ -83,7 +85,7 @@ const StarBackground = () => {
     return (
         <Container fluid className="p-0">
             <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0 }} />
-            {/* Your website content goes here */}
+            {<NamePage />}
         </Container>
     );
 };

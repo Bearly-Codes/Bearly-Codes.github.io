@@ -8,3 +8,34 @@
     color: white;
     font-size: 24px;
 }
+
+.description {
+    display: block;
+    text-align: center;
+    padding-top: 0vh;
+    font-size: 2vw;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: 320;
+    margin-top: 0vh;
+}
+
+.nameText {
+    padding-top: 35vh;
+    text-align: center;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;;
+    font-weight: 300;
+    font-size: 8vw;
+    padding-bottom: 0vh;
+    margin-bottom: 0vh;
+}
+
+.starBackground {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}

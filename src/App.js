@@ -1,14 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import StarBackground from "./StarBackground";
+import TypeWriter from 'react-typewriter';
+import React, { useEffect, useRef } from 'react';
 
-function App() {
-  return (
-      <div className="black_background">
-        <StarBackground />
-          <h1>Starry Sky</h1>
-      </div>
-  );
+const App = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+            return (
+                <div>
+                    <div className="black_background">
+                        <StarBackground />
+                    </div>
+                </div>
+            );
 }
 
 export default App;

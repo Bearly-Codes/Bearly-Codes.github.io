@@ -92,7 +92,7 @@ body {
 .about-me-header {
     text-align: center;
     font-size: 4vw;
-    padding-top: 5vh;
+    padding-top: 15vh;
     padding-bottom: 5vh;
     font-weight: 300;
     color: #DADADA;
@@ -101,10 +101,11 @@ body {
 
 .about-me-text {
     padding-right: 4vw;
-    color: #B7B7B7;
+    color: #CCCCCC;
     font-size: 1.2vw;
     text-align: center;
-    text-shadow: 0 0 1px #041425;
+    text-shadow: #262626 0px 0px 2px;
+    display: flex;
 }
 
 .about-me-image {

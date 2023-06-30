@@ -8,8 +8,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const NamePage = () => {
     return (
-        <div className="starBackground">
-            <h1 className="nameText">Nicholas Bogan</h1>
+        <div className="name-page-container">
+            <h1 className="name-text">Nicholas Bogan</h1>
             <TypeWriter typing={1} fixed={true}><h3 className="description">I build things.</h3></TypeWriter>
             <IconList />
         </div>
@@ -19,7 +19,7 @@ const NamePage = () => {
 
 const IconList = () => {
     return (
-        <div className="iconList">
+        <div className="icon-list">
             <a className="icon" href="https://github.com/Bearly-Codes">
                 <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -27,7 +27,7 @@ const IconList = () => {
                 <FontAwesomeIcon icon={faLinkedin} />
             </a>
         </div>
-    )
+    );
 }
 
 export default NamePage;

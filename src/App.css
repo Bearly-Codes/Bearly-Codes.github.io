@@ -1,13 +1,14 @@
 
-.black_background {
-    background-color: black;
-    width: 100%;
+.black-background {
+    background: linear-gradient(to bottom, black 84%, #06213D);
+    width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 24px;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .description {
@@ -20,7 +21,7 @@
     margin-top: 0vh;
 }
 
-.nameText {
+.name-text {
     padding-top: 35vh;
     text-align: center;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;;
@@ -30,13 +31,40 @@
     margin-bottom: 0vh;
 }
 
-.starBackground {
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.star-background-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.name-page-container {
     width: 100vw;
     height: 100vh;
     position: relative;
 }
 
-.iconList {
+/* Icons */
+.icon-list {
     text-align: center;
     font-size: 2.5vw;
     z-index: 9999;
@@ -55,8 +83,32 @@
     filter: drop-shadow(0 0 5px white);
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+/* About Page */
+
+.about-me {
+    background: linear-gradient(to bottom, #06213D, #4775A2);
+}
+
+.about-me-header {
+    text-align: center;
+    font-size: 4vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-weight: 300;
+    color: #DADADA;
+    text-shadow: 0 0 10px #041425;
+}
+
+.about-me-text {
+    padding-right: 4vw;
+    color: #B7B7B7;
+    font-size: 1.2vw;
+    text-align: center;
+    text-shadow: 0 0 1px #041425;
+}
+
+.about-me-image {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
 }

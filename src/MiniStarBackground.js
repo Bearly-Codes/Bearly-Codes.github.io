@@ -72,6 +72,7 @@ const MiniStarBackground = () => {
         const resizeCanvas = () => {
             canvas.width = canvas.parentNode.offsetWidth;
             canvas.height = canvas.parentNode.offsetHeight;
+            generateStars();
         };
 
         resizeCanvas();

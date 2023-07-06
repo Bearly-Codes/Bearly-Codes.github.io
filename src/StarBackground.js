@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import Container from 'react-bootstrap/Container';
-import TypeWriter from "react-typewriter";
 import NamePage from "./NamePage";
 
 /**
@@ -11,6 +9,7 @@ import NamePage from "./NamePage";
 const StarBackground = () => {
     const canvasRef = useRef(null);
     let stars = [];
+    let frozen = false;
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -36,29 +35,29 @@ const StarBackground = () => {
 
         const updateCanvas = () => {
             context.clearRect(0, 0, canvas.width, canvas.height);
+            if (!frozen) {
+                stars.forEach((star) => {
+                    star.x += 0.1;
+                    star.y += 0.1;
 
-            stars.forEach((star) => {
-                star.x += 0.1;
-                star.y += 0.1;
+                    if (star.x > canvas.width) star.x = 0;
+                    if (star.y > canvas.height) star.y = 0;
 
-                if (star.x > canvas.width) star.x = 0;
-                if (star.y > canvas.height) star.y = 0;
-
-                star.opacity += star.opacityDirection * 0.01;
+                    star.opacity += star.opacityDirection * 0.01;
 
 
-                if (star.opacity >= 1 || star.opacity <= 0.5) {
-                    star.opacityDirection *= -1;
-                }
+                    if (star.opacity >= 1 || star.opacity <= 0.5) {
+                        star.opacityDirection *= -1;
+                    }
 
-                if (star.y < canvas.height * .9) {
-                    drawStar(star.x, star.y, star.radius, star.opacity, star.opacityDirection);
-                } else {
-                    let fadeOutOpacity = (star.opacity - .2) * (1 - ((star.y - canvas.height * 0.9) / (canvas.height * 0.1)));
-                    drawStar(star.x, star.y, star.radius, fadeOutOpacity, star.opacityDirection);
-                }
-            });
-
+                    if (star.y < canvas.height * .9) {
+                        drawStar(star.x, star.y, star.radius, star.opacity, star.opacityDirection);
+                    } else {
+                        let fadeOutOpacity = (star.opacity - .2) * (1 - ((star.y - canvas.height * 0.9) / (canvas.height * 0.1)));
+                        drawStar(star.x, star.y, star.radius, fadeOutOpacity, star.opacityDirection);
+                    }
+                });
+            }
             requestAnimationFrame(updateCanvas);
         };
 
@@ -77,11 +76,21 @@ const StarBackground = () => {
             canvas.height = window.innerHeight;
             generateStars();
         };
+        const handleScroll = () => {
+            const scrollThreshold = window.innerHeight; // Adjust this value as needed
 
+            if (window.scrollY > scrollThreshold) {
+                frozen = true;
+            } else {
+                frozen = false;
+            }
+        };
         window.addEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 

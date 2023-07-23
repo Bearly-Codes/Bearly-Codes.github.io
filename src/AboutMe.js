@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useEffect} from 'react';
 import './Resources/Bootstrap/bootstrap-5.3.0-dist/css/bootstrap.css';
-import image from './Resources/png-clipart-english-draughts-checkerboard-checkerboard-angle-white.png';
+import image from './Resources/pfp.jpg';
 //TODO add a picture of me replace placeholder
 
 

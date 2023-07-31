@@ -1,38 +1,271 @@
-.App {
-  text-align: center;
+
+.star-background {
+    background: linear-gradient(to bottom, black 84%, #06213D);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.description {
+    display: block;
+    text-align: center;
+    padding-top: 0;
+    font-size: 2vw;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 320;
+    margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name-text {
+    padding-top: 35vh;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+    font-weight: 300;
+    font-size: 8vw;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.star-background-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.position-relative {
+    position: relative;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.name-page-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Icons */
+.icon-list {
+    text-align: center;
+    font-size: 2.5vw;
+    z-index: 9999;
+}
+
+.icon {
+    display: inline-block; /* or inline-flex */
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    color: grey;
+    transition: color 0.3s, filter 0.3s;
+}
+
+.icon:hover {
+    color: white;
+    filter: drop-shadow(0 0 5px white);
+}
+
+/* About Page */
+
+.about-me {
+    background: linear-gradient(to bottom, #06213D, #4775A2);
+    padding-bottom: 10vw;
+}
+
+.about-me-header {
+    text-align: center;
+    font-size: 4vw;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    font-weight: 300;
+    color: #DADADA;
+    text-shadow: 0 0 10px #041425;
+}
+
+.about-me-text {
+    padding-right: 4vw;
+    color: #CCCCCC;
+    font-size: 1.2vw;
+    text-align: center;
+    text-shadow: #262626 0 0 2px;
+}
+
+.about-me-image {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+}
+
+/* Projects Page */
+
+.projects {
+    background-color: #5d8bbb;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    text-align: center;
+    font-weight: 200;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-header {
+    font-size: 4vw;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    color: #DADADA;
+    text-shadow: 0 0 4px black;
+    font-weight: 300;
+
+}
+
+.project-container {
+    padding-bottom: 10vh;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vw;
+    width: 20vw;
+    border: 1px solid black;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: .4vw;
+    position: relative;
+    cursor: pointer;
+}
+
+.project-1:hover {
+    filter: drop-shadow(0 0 1.5vw white);
+}
+
+.project-2:hover {
+    filter: drop-shadow(0 0 5px black);
+}
+
+.project-1 {
+    background-color: black;
+    color: white;
+    transition: filter 0.3s;
+}
+
+.project-2 {
+    background-color: #cccccc;
+    color: #181818;
+    transition: filter 0.3s;
+}
+
+.project-text {
+    z-index: 1;
+    position: absolute;
+}
+
+.project-box.project-1 {
+    color: white;
+    position: relative;
+    z-index: 0;
+}
+
+.project-box.project-1 canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.project-box p {
+    font-size: 1vw;
+    padding-top: .5vw;
+}
+
+
+/* Footer */
+
+.footer {
+    padding-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #36506c;
+    padding-bottom: 2vw;
+}
+
+.footer-header {
+    font-size: 2.2vw;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    color: #DADADA;
+    text-shadow: 0 0 5px #041425;
+    font-weight: 300;
+    transition: color 0.5s, text-shadow 0.5s ease-out;
+}
+
+.footer-header.light-up {
+    animation: lightUpFade 2s;
+}
+
+@keyframes lightUpFade {
+    0% {
+        color: #fff;
+        text-shadow: 0 0 5px white;
+    }
+    50% {
+        color: #fff;
+        text-shadow: 0 0 5px white;
+    }
+    100% {
+        color: #DADADA;
+        text-shadow: 0 0 5px #041425;
+    }
+}
+
+.footer-description {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    font-size: 1vw;
+    color: #b2b2b2;
+    text-shadow: black 0 0 2px;
+    padding-bottom: 1vw;
+    text-align: center;
+}
+
+.inline-link {
+    display: inline;
+    color: #9ec1dc;
+    text-decoration: none;
+    transition: color 0.5s, text-shadow 0.5s;
+    cursor: pointer;
+}
+
+.inline-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
 }

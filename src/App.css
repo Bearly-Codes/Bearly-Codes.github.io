@@ -11,7 +11,6 @@
     overflow-x: hidden;
 }
 
-
 .description {
     display: block;
     text-align: center;
@@ -36,6 +35,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .star-background-container {
@@ -175,7 +178,7 @@ body {
 }
 
 .project-2 {
-    background-color: #cccccc;
+    background-color: #c7c7c7;
     color: #181818;
     transition: filter 0.3s;
 }

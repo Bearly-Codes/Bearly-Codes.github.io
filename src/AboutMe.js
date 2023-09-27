@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useEffect} from 'react';
 import './Resources/Bootstrap/bootstrap-5.3.0-dist/css/bootstrap.css';
-import image from './Resources/pfp.jpg';
+import image from './Resources/pfp2.png';
 //TODO add a picture of me replace placeholder
 
 

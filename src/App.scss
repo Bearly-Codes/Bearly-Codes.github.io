@@ -1,0 +1,305 @@
+$bg-color: #000000;
+$link-color: #61dafb;
+$inner-bg-color: #303030;
+$content-bg-color: #666666;
+
+html::-webkit-scrollbar {
+    display: none !important;
+}
+
+body {
+    scrollbar-width: none !important;
+}
+
+html, body {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.Namepage {
+    text-align: center;
+
+    &-name {
+        font-size: 12rem;
+        font-weight: 350;
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+    }
+
+    &-page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: $bg-color;
+        color: #ffffff;
+    }
+
+    &-subtitle {
+        display: inline-block;
+        position: relative;
+        font-size: 2rem;
+        font-weight: 200;
+        font-family: 'Teachers', sans-serif;
+        color: #ffffff;
+        min-width: 100%;
+    }
+
+    &-icons {
+        z-index : 2000;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+        color: #ffffff !important;
+    }
+
+    &-icon {
+        font-size: 2.5rem;
+        color: #ffffff !important;
+        transition: filter 0.3s;
+    }
+
+    &-icon:hover {
+        filter: drop-shadow(0 0 0.75rem #ffffff);
+    }
+}
+
+//Incomprehensible stuff for the icons
+a .Namepage-icon {
+    color: #ffffff !important;
+}
+
+.App {
+    text-align: center;
+    background-color: $bg-color;
+    overflow: hidden;
+    &-logo {
+        height: 40vmin;
+        pointer-events: none;
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: App-logo-spin infinite 20s linear;
+        }
+    }
+
+    &-header {
+        background-color: $bg-color;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+    }
+
+    &-link {
+        color: $link-color;
+    }
+}
+
+.B {
+    display:flex;
+    flex-direction: column;
+    // This must be a flex container, otherwise the background becomes see through
+    justify-content: center;
+    min-width : 95vw;
+    max-width : 95vw;
+    padding-bottom : 10vh;
+    &-cont {
+        z-index : 2;
+        display: flex;
+        border-image: url('./Images/border3.png') 7/4px repeat;
+        background-color: rgb(23, 23, 23);
+        color: #ffffff;
+        min-width: 85vw;
+    }
+}
+
+.Aboutme {
+    &-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-title {
+        padding-top: 2rem;
+        font-size: 4rem;
+        font-weight: 200;
+        font-family: 'Teachers', sans-serif;
+        color: #e1e1e1;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    &-content {
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        font-weight: 200;
+        font-family: 'Teachers', sans-serif;
+        color: #b6b8cd;
+        text-shadow: 2px 2px 4px #000000;
+        border-image: url('./Images/border3.png') 8/4px repeat;
+        max-width: 70vw;
+        padding : 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        margin : 2rem;
+    }
+}
+
+.Projects {
+    &-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-title {
+        padding-top: 2rem;
+        font-size: 4rem;
+        font-weight: 200;
+        font-family: 'Teachers', sans-serif;
+        color: #e1e1e1;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    &-content {
+        padding : 2rem;
+
+    }
+
+    &-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 0rem;
+        margin: 2rem !important;
+        border: 1px solid #ffffff;
+        width : 30vw !important;
+        aspect-ratio: 1/1;
+        }
+    
+    
+    &-box img {
+        width: 30vw;
+        height: 30vw;
+        object-fit: cover;
+        transition: opacity 0.3s;
+        position: absolute;
+    }
+
+    &-box:hover img {
+        opacity: 0;
+    }
+
+    &-proj {
+        &-title {
+            font-size: 2rem;
+            font-weight: 200;
+            font-family: 'Teachers', sans-serif;
+            color: #e1e1e1;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        &-content {
+            font-size: 1.5rem;
+            font-weight: 200;
+            font-family: 'Teachers', sans-serif;
+            color: #b6b8cd;
+            text-shadow: 2px 2px 4px #000000;
+            padding : 2rem;
+        }
+    }
+}
+
+.Contact {
+    &-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-title {
+        padding-top: 2rem;
+        font-size: 4rem;
+        font-weight: 200;
+        font-family: 'Teachers', sans-serif;
+        color: #e1e1e1;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    &-content {
+        font-size: 1.5rem;
+        font-weight: 200;
+        font-family: 'Teachers', sans-serif;
+        color: #b6b8cd;
+        text-shadow: 2px 2px 4px #000000;
+        padding : 2rem;
+        padding-bottom : 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 1rem;
+        margin: 2rem;
+        border: 1px solid #ffffff;
+        min-width: 20vw;
+        min-height: 20vw;
+    }
+
+}
+
+
+.CNavbar {
+    color : #ffffff !important;
+    &-bar {
+        background-color: transparent !important;
+        border: none !important;
+        top:0;
+        position: fixed;
+        width:100%;
+        margin: 0;
+        z-index: 1000;
+        display:flex;
+        justify-content: space-between;
+    }
+
+    &-link {
+        color: #ffffff !important;
+        font-family: "Teachers", sans-serif;
+        display: inline-block;
+        overflow: hidden;
+        position:relative;
+        font-size: 2rem !important;
+    }
+
+    &-link:hover {
+        text-shadow: 2px 2px 4px #ffffff;
+    }
+
+    &-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        top: 85%;
+        left: 50%;
+        background-color: #ffffff;
+        transition: width 2s ease, left 2s ease;
+    }
+
+    &-link:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}

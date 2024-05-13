@@ -1,23 +1,27 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Button from 'react-bootstrap/Button';
+import "bootstrap/dist/css/bootstrap.min.css"
+import Namepage from './Pages/Namepage/Namepage';
+import StarBackground from './Pages/Starbackground/Starbackground';
+import Aboutme from './Pages/AboutMe/Aboutme';
+import Container from 'react-bootstrap/Container';
+import Projects from './Pages/Projects/Projects';
+import Contact from './Pages/Contact/Contact';
+import CustomNavbar from './Pages/Navbar/Navbar';
 
 function App() {
+  // Todo plan out the containers for everything
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StarBackground/>
+      <Namepage/>
+      <Container className="B">
+        <Aboutme/>
+        <Projects/>
+        <Contact/>
+        
+      </Container>
     </div>
   );
 }

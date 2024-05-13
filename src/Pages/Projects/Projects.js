@@ -60,7 +60,7 @@ function Projects() {
                         Assembly Profiler
                     </Row>
                     <Row className="Projects-proj-content">
-                        Worked with another student anhd with guidance from professor Gustavo Rodriguez-Rivera to create an assembly profiler
+                        Worked with another student and with guidance from professor Gustavo Rodriguez-Rivera to create an assembly profiler
                         to analyze the performance of assembly code. Won 2nd place in the 2024 Cerias poster competition and was deployed
                         to hundreds of students for use in the Purdue Computer Architecture course.
                     </Row>

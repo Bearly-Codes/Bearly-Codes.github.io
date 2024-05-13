@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 // TODO: optimize
-// TODO: fix the resizing
 const StarBackground = () => {
     const canvasRef = useRef(null);
     const starsRef = useRef([]);
@@ -13,6 +12,7 @@ const StarBackground = () => {
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+
         };
 
         const generateStars = () => {
@@ -71,6 +71,7 @@ const StarBackground = () => {
 
         const handleResize = () => {
             resizeCanvas();
+            generateStars();
             drawStars();
         };
 

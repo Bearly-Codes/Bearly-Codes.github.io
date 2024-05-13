@@ -180,16 +180,19 @@ a .Namepage-icon {
         margin: 2rem !important;
         border: 1px solid #ffffff;
         width : 30vw !important;
-        aspect-ratio: 1/1;
-        }
-    
+        aspect-ratio: 1/1 !important;
+        position: relative;
+        overflow: hidden;
+    }
     
     &-box img {
         width: 30vw;
         height: 30vw;
         object-fit: cover;
         transition: opacity 0.3s;
-        position: absolute;
+        position : absolute;
+        top: 0;
+        left : 0;
     }
 
     &-box:hover img {
@@ -213,6 +216,16 @@ a .Namepage-icon {
             text-shadow: 2px 2px 4px #000000;
             padding : 2rem;
         }
+    }
+
+    &-icon {
+        font-size: 2.5rem;
+        color: #ffffff !important;
+        transition: filter 0.3s;
+    }
+
+    &-icon:hover {
+        filter: drop-shadow(0 0 0.75rem #ffffff);
     }
 }
 

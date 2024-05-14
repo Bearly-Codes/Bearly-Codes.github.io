@@ -285,7 +285,7 @@ a .Namepage-icon {
         color: #b6b8cd;
         text-shadow: 2px 2px 4px #000000;
         padding : 2rem;
-        padding-bottom : 2rem;
+        padding-bottom : .5rem;
         display: flex;
         flex-direction: column;
     }
@@ -301,6 +301,16 @@ a .Namepage-icon {
         border: 1px solid #ffffff;
         min-width: 20vw;
         min-height: 20vw;
+    }
+
+    &-credit {
+        font-size: 1rem;
+        font-weight: 200;
+        font-family: 'Teachers', sans-serif;
+        color: black !important;
+        padding : 0;
+        padding-bottom : 2rem;
+    
     }
 
 }

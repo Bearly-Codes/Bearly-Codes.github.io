@@ -15,6 +15,11 @@ function Contact() {
                 <a href="mailto:nickabogan@gmail.com">nickabogan@gmail.com</a>
                 <a href="mailto:bogann@purdue.edu">bogann@purdue.edu</a>
             </Row>
+            <Row className="Contact-credit">
+            <a href="https://www.flaticon.com/free-icons/stellar" style={{
+                color: 'black',
+            }} title="stellar icons">Stellar icons created by meaicon - Flaticon</a>
+            </Row>
         </Container>
     );
 }

@@ -38,7 +38,7 @@ function Projects() {
                         <img src={BoilerBytes} alt="Boiler Bytes" />
                     </a>
                     <Row className="Projects-proj-title">
-                        Boiler Bytes
+                        Boiler Byte
                     </Row>
                     <Row className="Projects-proj-content">
                         Scrum leader for a team of 5 developers.

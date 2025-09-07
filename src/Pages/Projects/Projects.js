@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import BoilerBytes from '../../Images/BoilerBytes.jpg';
 import ASMProfiler from '../../Images/ASMProfiler.png';
 import SunriseOS from '../../Images/SunriseOS.png';
-import Nyx from '../../Images/Nyx.png';
+import Corporatize from '../../Images/Corporatize.png';
 
 function Projects() {
     return (
@@ -67,13 +67,14 @@ function Projects() {
                 </Col>
                 <Col md={6} sm={12} className="Projects-box">
                     <a href="https://github.com/Bearly-Codes/Bearly-Codes.github.io" target="_blank" style={{ textDecoration: 'none', display: 'inline-block' }}>
-                        <img src={Nyx} alt="Nyx" />
+                        <img src={Corporatize} alt="Corporatize" />
                     </a>
                     <Row className="Projects-proj-title">
-                        Nyx
+                        Corporatize
                     </Row>
                     <Row className="Projects-proj-content">
-                        My personal website built with react and bootstrap, styled with SASS.
+                        A website built with Java and CSS, hosted by OnRender with an automated CI/CD pipeline using Github Actions.
+                        Contacts the Google Gemini API to generate responses to user inputs.
                     </Row>
                     <Row className="Projects-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">

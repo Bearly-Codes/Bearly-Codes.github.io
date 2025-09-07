@@ -66,7 +66,7 @@ function Projects() {
                     </Row>
                 </Col>
                 <Col md={6} sm={12} className="Projects-box">
-                    <a href="https://github.com/Bearly-Codes/Bearly-Codes.github.io" target="_blank" style={{ textDecoration: 'none', display: 'inline-block' }}>
+                    <a href="https://github.com/Bearly-Codes/Corporatize" target="_blank" style={{ textDecoration: 'none', display: 'inline-block' }}>
                         <img src={Corporatize} alt="Corporatize" />
                     </a>
                     <Row className="Projects-proj-title">
